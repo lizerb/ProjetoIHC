@@ -2,18 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/navigation_home"
-        android:icon="@drawable/ic_home_black_24dp"
-        android:title="@string/title_home" />
+        android:id="@+id/navigation_marcarpresenca"
+        android:icon="@drawable/ic_baseline_qr_code_24"
+        android:title="@string/marcar_presen_a" />
 
     <item
-        android:id="@+id/navigation_qrcode"
-        android:icon="@drawable/ic_dashboard_black_24dp"
-        android:title="@string/title_dashboard" />
+        android:id="@+id/navigation_presencas"
+        android:icon="@drawable/ic_baseline_checklist_24"
+        android:title="@string/presen_as" />
 
     <item
-        android:id="@+id/navigation_notifications"
-        android:icon="@drawable/ic_notifications_black_24dp"
-        android:title="@string/title_notifications" />
+        android:id="@+id/navigation_ausencias"
+        android:icon="@drawable/ic_baseline_schedule_24"
+        android:title="@string/agendar_aus_ncias" />
 
 </menu>

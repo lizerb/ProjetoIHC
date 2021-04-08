@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">ProjetoIHC</string>
+    <string name="app_name">Ponto PPGC</string>
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
@@ -13,7 +13,12 @@
     <string name="entrar">Entrar</string>
     <string name="nro_cart_o_ufrgs">Nro. Cartão UFRGS</string>
     <string name="title_activity_menu">MainActivity</string>
-    <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
+    <string name="title_home">Marcar presença</string>
+    <string name="title_dashboard">Visualizar presenças marcadas</string>
+    <string name="title_notifications">Agendar ausências</string>
+    <string name="agendar_aus_ncias">Agendar ausências</string>
+    <string name="presen_as">Presenças</string>
+    <string name="marcar_presen_a">Marcar presença</string>
+    <string name="salvar">Salvar</string>
+    <string name="observa_o">Observação</string>
 </resources>

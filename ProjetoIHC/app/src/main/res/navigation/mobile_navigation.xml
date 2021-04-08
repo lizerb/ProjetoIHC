@@ -3,23 +3,22 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@id/navigation_marcarpresenca">
 
     <fragment
-        android:id="@+id/navigation_home"
+        android:id="@+id/navigation_marcarpresenca"
         android:name="com.example.projetoihc.ui.home.HomeFragment"
-        android:label="@string/title_home"
+        android:label="@string/marcar_presen_a"
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/navigation_qrcode"
-        android:name="com.example.projetoihc.ui.dashboard.DashboardFragment"
-        android:label="Escanear QR Code"
-        tools:layout="@layout/fragment_dashboard" />
-
-    <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_ausencias"
         android:name="com.example.projetoihc.ui.notifications.NotificationsFragment"
-        android:label="Visualizar Pontos"
+        android:label="@string/agendar_aus_ncias"
         tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/navigation_presencas"
+        android:name="com.example.projetoihc.ui.dashboard.DashboardFragment"
+        android:label="@string/presen_as"
+        tools:layout="@layout/fragment_dashboard" />
 </navigation>
