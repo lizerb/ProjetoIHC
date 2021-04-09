@@ -6,13 +6,58 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
+    <Button
+        android:id="@+id/btnAgendarAusencias"
+        android:layout_width="151dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginRight="135dp"
+        android:layout_marginBottom="83dp"
+        android:text="Agendar ausência"
+        android:textColor="@color/black"
+        android:textSize="16sp"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnVisPresencas" />
+
+    <Button
+        android:id="@+id/btnVisPresencas"
+        android:layout_width="151dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="92dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginRight="135dp"
+        android:layout_marginBottom="90dp"
+        android:text="Visualizar presenças"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnAgendarAusencias"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnMarcarpresenca" />
+
+    <Button
+        android:id="@+id/btnMarcarpresenca"
+        android:layout_width="151dp"
+        android:layout_height="88dp"
+        android:layout_marginStart="134dp"
+        android:layout_marginLeft="134dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="135dp"
+        android:layout_marginRight="135dp"
+        android:layout_marginBottom="92dp"
+        android:text="Marcar presença"
+        android:textColor="@color/black"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toTopOf="@+id/btnVisPresencas"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -23,6 +23,7 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.projetoihc.MainActivity;
 import com.example.projetoihc.MenuActivity;
 import com.example.projetoihc.R;
 
@@ -115,7 +116,7 @@ public class LoginActivity extends AppCompatActivity {
                 //loadingProgressBar.setVisibility(View.VISIBLE);
                 //loginViewModel.login(usernameEditText.getText().toString(),
                     //    passwordEditText.getText().toString());
-                Intent intent = new Intent(LoginActivity.this, MenuActivity.class);
+                Intent intent = new Intent(LoginActivity.this, MainActivity.class);
                 startActivity(intent);
             }
         });
