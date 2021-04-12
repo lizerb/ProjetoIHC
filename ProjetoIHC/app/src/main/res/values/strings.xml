@@ -21,4 +21,9 @@
     <string name="marcar_presen_a">Marcar presença</string>
     <string name="salvar">Salvar</string>
     <string name="observa_o">Observação</string>
+    <string name="agendar_aus_ncia">Agendar ausência</string>
+    <string name="visualizar_presen_as">Visualizar presenças</string>
+    <string name="bom_dia">Bom dia</string>
+    <string name="textview">TextView</string>
+    <string name="ponto_ppgc">Ponto PPGC</string>
 </resources>

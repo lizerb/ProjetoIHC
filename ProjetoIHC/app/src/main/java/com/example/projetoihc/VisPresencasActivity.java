@@ -29,6 +29,7 @@ public class VisPresencasActivity extends AppCompatActivity {
         mensagemDaOutraTela.setText(data);
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //botao retornar ao menu
+        getSupportActionBar().setTitle("Visualizar presenças");     // troca o título
 
         //TextView clockedToXML = new TextView(this);
         //clockedToXML.setText(data);

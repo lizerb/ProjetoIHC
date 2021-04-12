@@ -41,6 +41,7 @@ public class MarcarPresencaActivity extends AppCompatActivity {
         final Activity activity = this;
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //botao retornar ao menu
+        getSupportActionBar().setTitle("Marcar presença");     // troca o título
 
         btnScan.setOnClickListener(new View.OnClickListener() {
             @Override
