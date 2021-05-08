@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/marcarPresenca"
+        android:title="Marcar Presença"
+        android:icon="@drawable/ic_baseline_qr_code_24"/>
+    <item
+        android:id="@+id/visPresencas"
+        android:title="Visualizar Presenças"
+        android:icon="@drawable/ic_baseline_checklist_24"/>
+    <item
+        android:id="@+id/agendarAusencia"
+        android:title="Agendar Ausência"
+        android:icon="@drawable/ic_baseline_schedule_24"/>
+</menu>

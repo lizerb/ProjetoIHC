@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/marcarPresenca">
+
+    <fragment
+        android:id="@+id/marcarPresenca"
+        android:name="com.example.projetoihcbottomnavigation.MarcarPresenca"
+        android:label="fragment_marcar_presenca"
+        tools:layout="@layout/fragment_marcar_presenca" />
+    <fragment
+        android:id="@+id/visPresencas"
+        android:name="com.example.projetoihcbottomnavigation.VisPresencas"
+        android:label="fragment_vis_presencas"
+        tools:layout="@layout/fragment_vis_presencas" />
+    <fragment
+        android:id="@+id/agendarAusencia"
+        android:name="com.example.projetoihcbottomnavigation.AgendarAusencia"
+        android:label="fragment_agendar_ausencia"
+        tools:layout="@layout/fragment_agendar_ausencia" />
+</navigation>
