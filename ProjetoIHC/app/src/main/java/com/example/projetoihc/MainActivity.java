@@ -39,6 +39,8 @@ public class MainActivity extends AppCompatActivity {
         txtData = findViewById(R.id.textViewData);
         txtHora = findViewById(R.id.textViewHora);
 
+        getSupportActionBar().setTitle("Menu");     // troca o título
+
         String currentDate = DateFormat.getDateInstance(SHORT).format(new Date());
         String currentTime = DateFormat.getTimeInstance(SHORT).format(new Date());
 
