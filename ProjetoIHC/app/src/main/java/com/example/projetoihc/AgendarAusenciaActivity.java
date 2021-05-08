@@ -15,6 +15,11 @@ public class AgendarAusenciaActivity extends AppCompatActivity {
 
     private Button btnSalvar;
     private EditText editTextObs;
+    private Button btnMarcarPresenca;
+    private Button btnVisPresencas;
+    private Button btnAgendarAusencia;
+    private Button btnMenu;
+    private Button btnAgendadas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,9 +28,30 @@ public class AgendarAusenciaActivity extends AppCompatActivity {
 
         btnSalvar = findViewById(R.id.btnSalvar);
         editTextObs = findViewById(R.id.editTextObs);
+        btnMarcarPresenca = findViewById(R.id.btnMarcarpresenca);
+        btnVisPresencas = findViewById(R.id.btnVisPresencas);
+        btnAgendarAusencia = findViewById(R.id.btnAgendarAusencias);
+        btnMenu = findViewById(R.id.btnMenu);
+        btnAgendadas = findViewById(R.id.btnAgendados);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //botao retornar ao menu
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //botao retornar ao menu
         getSupportActionBar().setTitle("Agendar ausência");     // troca o título
+
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAgendadas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), VisAgendamentosActivity.class);
+                startActivity(intent);
+            }
+        });
 
         btnSalvar.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +59,30 @@ public class AgendarAusenciaActivity extends AppCompatActivity {
                 Toast.makeText(AgendarAusenciaActivity.this, "Ausência agendada!", Toast.LENGTH_LONG).show();
                 editTextObs.setText("");
                 editTextObs.clearFocus();
+            }
+        });
+
+        btnMarcarPresenca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MarcarPresencaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnVisPresencas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), VisPresencasActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAgendarAusencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AgendarAusenciaActivity.class);
+                startActivity(intent);
             }
         });
 

@@ -32,6 +32,10 @@ import java.time.format.DateTimeFormatter;
 public class MarcarPresencaActivity extends AppCompatActivity {
 
     Button btnScan;
+    private Button btnMarcarPresenca;
+    private Button btnVisPresencas;
+    private Button btnAgendarAusencia;
+    private Button btnMenu;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -39,8 +43,12 @@ public class MarcarPresencaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_marcar_presenca);
         btnScan = (Button) findViewById(R.id.btnScan);
         final Activity activity = this;
+        btnMarcarPresenca = findViewById(R.id.btnMarcarpresenca);
+        btnVisPresencas = findViewById(R.id.btnVisPresencas);
+        btnAgendarAusencia = findViewById(R.id.btnAgendarAusencias);
+        btnMenu = findViewById(R.id.btnMenu);
 
-        getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //botao retornar ao menu
+        //getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //botao retornar ao menu
         getSupportActionBar().setTitle("Marcar presença");     // troca o título
 
         btnScan.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +59,38 @@ public class MarcarPresencaActivity extends AppCompatActivity {
                 integrator.setPrompt("Aponte a câmera para o QR Code");
                 integrator.setCameraId(0);
                 integrator.initiateScan();
+            }
+        });
+
+        btnMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnMarcarPresenca.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MarcarPresencaActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnVisPresencas.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), VisPresencasActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btnAgendarAusencia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), AgendarAusenciaActivity.class);
+                startActivity(intent);
             }
         });
     }

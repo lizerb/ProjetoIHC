@@ -24,6 +24,7 @@ import com.google.zxing.integration.android.IntentResult;
 public class HomeFragment extends Fragment {
 
     private HomeViewModel homeViewModel;
+    Button btnScan;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
