@@ -6,49 +6,17 @@
     android:layout_height="match_parent"
     tools:context=".VisPresencasActivity">
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="244dp"
-        android:layout_height="35dp"
-        android:layout_marginStart="30dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginEnd="137dp"
-        android:layout_marginRight="137dp"
-        android:layout_marginBottom="318dp"
-        android:text="05/04/2021 - 10:00"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ListView
+        android:id="@+id/listPresencas"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="550dp"
+        app:layout_constraintBottom_toTopOf="@+id/btnMarcarpresenca"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_width="243dp"
-        android:layout_height="35dp"
-        android:layout_marginBottom="50dp"
-        android:text="06/04/2021 - 10:00"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView5"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.178"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="240dp"
-        android:layout_height="32dp"
-        android:layout_marginBottom="50dp"
-        android:text="07/04/2021 - 10:00"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/textView4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.175"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView2" />
-
-    <TextView
+    <!--<TextView
         android:id="@+id/textView2"
         android:layout_width="240dp"
         android:layout_height="33dp"
@@ -60,7 +28,7 @@
         app:layout_constraintHorizontal_bias="0.175"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.546" />
+        app:layout_constraintVertical_bias="0.546" />-->
 
     <Button
         android:id="@+id/btnMarcarpresenca"

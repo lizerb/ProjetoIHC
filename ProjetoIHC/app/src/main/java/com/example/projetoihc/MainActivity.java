@@ -1,8 +1,5 @@
 package com.example.projetoihc;
 
-import androidx.annotation.RequiresApi;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -11,14 +8,14 @@ import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.example.projetoihc.ui.login.LoginActivity;
+import androidx.annotation.RequiresApi;
+import androidx.appcompat.app.AppCompatActivity;
 
-import java.text.BreakIterator;
 import java.text.DateFormat;
 import java.util.Date;
-import java.util.Locale;
 
-import static java.text.DateFormat.DEFAULT;
+import io.realm.Realm;
+
 import static java.text.DateFormat.SHORT;
 
 public class MainActivity extends AppCompatActivity {
@@ -31,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private ProgressBar progressBar;
     private TextView progressBarText;
     private int progr = 0;
+    Realm realm;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -96,4 +94,5 @@ public class MainActivity extends AppCompatActivity {
         progressBar.setProgress(progr);
         progressBarText.setText(progr+"%");
     }
+
 }
