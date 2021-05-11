@@ -1,6 +1,8 @@
 package com.example.projetoihc;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
@@ -14,8 +16,6 @@ import androidx.appcompat.app.AppCompatActivity;
 import java.text.DateFormat;
 import java.util.Date;
 
-import io.realm.Realm;
-
 import static java.text.DateFormat.SHORT;
 
 public class MainActivity extends AppCompatActivity {
@@ -27,8 +27,7 @@ public class MainActivity extends AppCompatActivity {
     private TextView txtHora;
     private ProgressBar progressBar;
     private TextView progressBarText;
-    private int progr = 0;
-    Realm realm;
+    public int progr = 0;
 
     @RequiresApi(api = Build.VERSION_CODES.N)
     @Override
@@ -45,6 +44,11 @@ public class MainActivity extends AppCompatActivity {
         progressBar = findViewById(R.id.progressBar);
         progressBarText = findViewById(R.id.textProgressBar);
 
+        //updateProgressBar();
+
+        SharedPreferences myFourthSharedPreferences = this.getSharedPreferences("MYPREFERENCEPROGRESS", Context.MODE_PRIVATE);
+        String data = myFourthSharedPreferences.getString("PROGRESS", "0");
+        progr = progr + Integer.parseInt(data);
         updateProgressBar();
 
         getSupportActionBar().setTitle("Menu");     // troca o título
@@ -90,9 +94,8 @@ public class MainActivity extends AppCompatActivity {
 
     }
 
-    private void updateProgressBar() {
+    public void updateProgressBar() {
         progressBar.setProgress(progr);
         progressBarText.setText(progr+"%");
     }
-
 }

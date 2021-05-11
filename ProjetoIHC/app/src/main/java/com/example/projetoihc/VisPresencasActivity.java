@@ -1,20 +1,14 @@
 package com.example.projetoihc;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
-import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.example.projetoihc.CustomAdapter.CustomAdapter;
-import com.example.projetoihc.MyHelper.MyHelper;
-
-import io.realm.Realm;
-import io.realm.RealmChangeListener;
 
 public class VisPresencasActivity extends AppCompatActivity {
 
@@ -23,10 +17,7 @@ public class VisPresencasActivity extends AppCompatActivity {
     private Button btnVisPresencas;
     private Button btnAgendarAusencia;
     private Button btnMenu;
-    Realm realm;
-    ListView listView;
-    MyHelper helper;
-    RealmChangeListener realmChangeListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,21 +28,13 @@ public class VisPresencasActivity extends AppCompatActivity {
         btnVisPresencas = findViewById(R.id.btnVisPresencas);
         btnAgendarAusencia = findViewById(R.id.btnAgendarAusencias);
         btnMenu = findViewById(R.id.btnMenu);
-        realm = Realm.getDefaultInstance();
-        listView = findViewById(R.id.listPresencas);
 
-        helper = new MyHelper(realm);
-        helper.selectFromDB();
 
-        CustomAdapter adapter = new CustomAdapter(this, helper.justRefresh());
-        listView.setAdapter(adapter);
-        Refresh();
+        SharedPreferences mySharedPreferences = this.getSharedPreferences("MYPREFERENCENAME", Context.MODE_PRIVATE);
+        String data = mySharedPreferences.getString("NAME", "");
 
-        //SharedPreferences mySharedPreferences = this.getSharedPreferences("MYPREFERENCENAME", Context.MODE_PRIVATE);
-        //String data = mySharedPreferences.getString("DATA", "");
-
-        //mensagemDaOutraTela = findViewById(R.id.textView2);
-        //mensagemDaOutraTela.setText(data);
+        mensagemDaOutraTela = findViewById(R.id.textView2);
+        mensagemDaOutraTela.setText(data);
 
         //getSupportActionBar().setDisplayHomeAsUpEnabled(true);  //botao retornar ao menu
         getSupportActionBar().setTitle("Visualizar presenças");     // troca o título
@@ -99,24 +82,8 @@ public class VisPresencasActivity extends AppCompatActivity {
         });
     }
 
-    public boolean onCreateOptionsMenu(Menu menu) {
-        return true;
-    }
-
-    private void Refresh(){
-        realmChangeListener = new RealmChangeListener() {
-            @Override
-            public void onChange(Object o) {
-                CustomAdapter adapter = new CustomAdapter(VisPresencasActivity.this, helper.justRefresh());
-                listView.setAdapter(adapter);
-            }
-        };
-        realm.addChangeListener(realmChangeListener);
-    }
-
-    //protected void OnDestroy(){
-     //  super.onDestroy();
-     //   realm.removeChangeListener(realmChangeListener);
-      //  realm.close();
+    //public boolean onCreateOptionsMenu(Menu menu) {
+        //return true;
     //}
+
 }
